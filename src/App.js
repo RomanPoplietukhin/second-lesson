@@ -11,7 +11,7 @@ function App() {
             <h2 className="title"> { el.title } </h2>
             <p className="date"> { el.dateCreated } </p>
             <div dangerouslySetInnerHTML={{__html: el.content }}></div>
-            {null || <img src={ el.photo } alt={ ' ' } /> }
+            {true && <img src={ el.photo } alt={ '  ' } /> }
             {el.isSpecial && ( <h3 style={{ color: 'red' }}>Special card</h3> )}
             <div className="cathegoriess">
               <h3 className="cathegories-title">Cathegories</h3>
@@ -21,7 +21,7 @@ function App() {
                 ))}
               </ul>
             </div>
-            { null || <a href={ el.link }>Gulgul</a> }
+            { true && <a href={ el.link }>Gulgul</a> }
             <h5 className="author">{ el.author }</h5>
           </div>
         ))}
